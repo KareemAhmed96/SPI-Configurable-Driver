@@ -4,14 +4,16 @@ AVR ATmega32 Serial Peripheral Interface Software Driver that is highly configur
 Example to use this driver:
 ---------------------------
 
-
+```
 int main()
 {
-	// Declaring a structure called "SPI_Config" of type "SPI_ConfigType"
-	// Then giving it's members the following parameters:
-	// Most Significant Bit First: MSB_FIRST
-	// Clock Frequency = 4MHZ: F_CLOCK_4
-	// Master or Slave Selection: MASTER
+	/* 
+	 * Declaring a structure called "SPI_Config" of type "SPI_ConfigType"
+	 * Then giving it's members the following parameters:
+	 * Most Significant Bit First: MSB_FIRST
+	 * Clock Frequency = 4MHZ: F_CLOCK_4
+	 * Master or Slave Selection: MASTER
+	 */
 	
 	SPI_ConfigType SPI_Config = {MSB_FIRST,F_CLOCK_4,MASTER};
 
@@ -20,3 +22,4 @@ int main()
 	
 	SPI_init(&SPI_ConfigType);
 }
+```
